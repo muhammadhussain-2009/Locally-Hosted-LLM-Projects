@@ -73,19 +73,6 @@ pip install headroom-ai[all]
 ```bash
 uv pip install headroom-ai[all]
 ```
-
-For minimal installation without all extras:
-
-```bash
-pip install headroom-ai
-```
-
-or with UV:
-
-```bash
-uv pip install headroom-ai
-```
-
 ## 🔧 Framework Integration
 
 ### LangChain Integration
