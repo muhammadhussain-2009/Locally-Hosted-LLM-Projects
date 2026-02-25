@@ -122,7 +122,24 @@ def calculate_savings(baseline_output, compressed_output):
     print()
     print(f"Same answer. {savings_pct:.1f}% fewer tokens.")
 
+def demo_proxy_mode():
+    """Show proxy mode example."""
+    print("=" * 60)
+    print("PROXY MODE (Zero Code Changes)")
+    print("=" * 60)
+    print("""
+# Start the proxy
+$ headroom proxy --port 8787
 
+# Point Claude Code at it
+$ ANTHROPIC_BASE_URL=http://localhost:8787 claude
+
+# Point Cursor at it
+$ OPENAI_BASE_URL=http://localhost:8787/v1 cursor
+
+# Your existing code works unchanged - Headroom compresses transparently
+""")
+    
 def main():
     print()
     print("  HEADROOM CONTEXT OPTIMIZATION DEMO")
@@ -134,6 +151,7 @@ def main():
     baseline_logs, baseline_output = demo_without_headroom()
     compressed_logs, compressed_output = demo_with_headroom()
     calculate_savings(baseline_output, compressed_output)
+    demo_proxy_mode()
     print("=" * 60)
     print("GET STARTED")
     print("=" * 60)
