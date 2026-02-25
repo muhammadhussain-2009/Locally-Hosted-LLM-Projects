@@ -6,7 +6,7 @@ This app demonstrates how to use **Headroom** to dramatically reduce token usage
 
 Headroom is an intelligent context compression framework that helps you reduce LLM costs by 50-90% while maintaining the quality of responses. By intelligently filtering and compressing tool outputs, context windows, and conversation history, Headroom ensures your LLM applications stay within budget without sacrificing performance.
 
-## 🎯 Key Benefits of Headroom
+## Key Benefits of Headroom
 
 - **Dramatic Cost Reduction**: Reduce token consumption by up to 93.7% (as demonstrated in this project)
 - **Intelligent Compression**: Keeps critical information while removing noise
@@ -15,37 +15,16 @@ Headroom is an intelligent context compression framework that helps you reduce L
 - **Zero Performance Loss**: Same quality answers with significantly fewer tokens
 - **Seamless Integration**: Drop-in replacement for your existing LLM workflows
 
-## ✨ Features
+## Features
+- **Smart Crasher**: Statistical compression of JSON tool outputs—keeps first items, last items, anomalies, and query-relevant matches
+- **CacheAligner**: Stabilizes prefixes for better provider-side caching (OpenAI, Anthropic, Google)
+- **RollingWindow**: Manages context limits without breaking tool call/response pairing
+- **Code-Aware Compression**: AST-based compression using tree-sitter
+- **LLMLingua-2 Integration**: Optional ML-based 20x compression
+- **Memory System**: Persistent, LLM-driven memory with zero-latency inline extraction
+- **CCR (Compress-Cache-Retrieve)**: Reversible compression—LLM requests original data when needed
 
-### SmartCrusher
-Statistical compression of JSON tool outputs that intelligently keeps:
-- First items (context)
-- Last items (recency)
-- Anomalies (errors, exceptions, non-standard entries)
-- Query-relevant matches
-
-### CacheAligner
-Stabilizes prefixes for better provider-side caching support across:
-- OpenAI
-- Anthropic
-- Google Cloud AI
-
-### RollingWindow
-Manages context limits intelligently without breaking tool call/response pairing
-
-### Code-Aware Compression
-AST-based compression using tree-sitter for intelligent code reduction
-
-### LLMLingua-2 Integration
-Optional ML-based compression for up to 20x additional compression
-
-### Memory System
-Persistent, LLM-driven memory with zero-latency inline extraction
-
-### CCR (Compress-Cache-Retrieve)
-Reversible compression—LLM requests original data when needed for full context recovery
-
-## 📊 Benchmark Results
+## Benchmark Results
 
 This demo shows real-world token savings:
 
@@ -60,7 +39,7 @@ Savings:           93.7%
 
 The demo compresses 100 log entries down to just 6 relevant entries while maintaining the ability to answer critical questions about what caused the outage, error codes, and fixes needed.
 
-## 🚀 Installation
+## Installation
 
 ### Using pip
 
@@ -199,7 +178,7 @@ The proxy automatically intercepts and compresses:
 - Conversation history
 - System prompts
 
-## 🏃 Running the Demo
+## Running the Demo
 
 Run the included demo to see Headroom in action:
 
@@ -212,7 +191,7 @@ This will show:
 2. **With Headroom**: Compressed to 6 relevant entries
 3. **Savings**: 93.7% token reduction
 
-## 💡 Best Use Cases
+## Best Use Cases
 
 - **Log Analysis**: Compress massive log files while keeping critical errors and patterns
 - **API Monitoring**: Reduce noise from repetitive API responses
@@ -223,7 +202,7 @@ This will show:
 - **Conversation History Management**: Keep conversation threads concise without losing context
 - **Agent Tool Outputs**: Automatically compress tool responses in agentic workflows
 
-## 🔒 Safety Guarantees
+## Safety Guarantees
 
 Headroom provides the following safety guarantees:
 
@@ -234,14 +213,14 @@ Headroom provides the following safety guarantees:
 - **Audit Trail**: Full logging of what was compressed and why
 - **Provider Compatibility**: Works seamlessly with all major LLM providers' safety mechanisms
 
-## 📚 Resources
+## Resources
 
 - **Official GitHub**: https://github.com/chopratejas/headroom
 - **PyPI Package**: https://pypi.org/project/headroom-ai/
 - **Documentation**: https://headroom.ai/docs
 - **GitHub Issues**: Report bugs and request features
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how to get involved:
 
@@ -278,7 +257,7 @@ We welcome contributions! Here's how to get involved:
 - Write tests for new features
 - Update documentation as needed
 
-## 🎯 What's Next with This Project?
+## What's Next with This Project?
 
 This demo is a starting point. Here are ways to expand and customize it:
 
